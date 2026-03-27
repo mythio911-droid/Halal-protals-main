@@ -2,10 +2,10 @@ export type PortalType = 'hospital' | 'superadmin';
 
 export type RequestStatus = 'pending' | 'approved' | 'rejected' | 'clarification_needed';
 
-export type UpdateType = 
-  | 'doctor_availability' 
-  | 'hospital_profile' 
-  | 'department' 
+export type UpdateType =
+  | 'doctor_availability'
+  | 'hospital_profile'
+  | 'department'
   | 'announcement';
 
 export interface ChangeRequest {
@@ -15,8 +15,8 @@ export interface ChangeRequest {
   updateType: UpdateType;
   status: RequestStatus;
   submittedAt: Date;
-  currentData: Record<string, any>;
-  proposedData: Record<string, any>;
+  currentData: Record<string, unknown>;
+  proposedData: Record<string, unknown>;
   submittedBy: string;
   reviewedBy?: string;
   reviewedAt?: Date;
